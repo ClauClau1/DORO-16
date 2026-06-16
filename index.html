@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 <body>
 
@@ -35,16 +35,22 @@
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="#about">The House</a>
-        <a href="#offer">What We Do</a>
-        <a href="#events">Events</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#specs">Spaces</a>
-        <a href="#team">People</a>
-        <a href="#contact" class="nav__cta">Plan an event</a>
+        <a href="#about" data-i18n="nav.house">The House</a>
+        <a href="#offer" data-i18n="nav.offer">What We Do</a>
+        <a href="#events" data-i18n="nav.events">Events</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#specs" data-i18n="nav.spaces">Spaces</a>
+        <a href="#journal" data-i18n="nav.journal">Journal</a>
+        <a href="#team" data-i18n="nav.people">People</a>
+        <div class="lang-toggle" role="group" aria-label="Language / Limba">
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+          <span class="lang-toggle__sep">/</span>
+          <button class="lang-btn" type="button" data-lang="ro">RO</button>
+        </div>
+        <a href="#contact" class="nav__cta" data-i18n="nav.cta">Plan an event</a>
       </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" data-i18n-aria="nav.menu" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -58,15 +64,15 @@
         <img src="assets/img/house-drawing.png" alt="" />
       </div>
       <div class="hero__inner">
-        <p class="eyebrow reveal">Dorobanți 16 Events · Bucharest</p>
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow">Dorobanți 16 Events · Bucharest</p>
         <h1 class="hero__title reveal">DORO<span class="hero__dash">–</span>16</h1>
-        <p class="hero__lede reveal">We are the space for <em>extraordinary&nbsp;events.</em></p>
+        <p class="hero__lede reveal" data-i18n="hero.lede">We are the space for <em>extraordinary&nbsp;events.</em></p>
         <div class="hero__actions reveal">
-          <a href="#contact" class="btn btn--solid">Plan your event</a>
-          <a href="#about" class="btn btn--ghost">Discover the house</a>
+          <a href="#contact" class="btn btn--solid" data-i18n="hero.cta1">Plan your event</a>
+          <a href="#about" class="btn btn--ghost" data-i18n="hero.cta2">Discover the house</a>
         </div>
       </div>
-      <a href="#about" class="hero__scroll" aria-label="Scroll to content">
+      <a href="#about" class="hero__scroll" data-i18n-aria="hero.scroll" aria-label="Scroll to content">
         <span></span>
       </a>
     </section>
@@ -79,11 +85,11 @@
           <span class="about__media-tag">Calea Dorobanți 16</span>
         </div>
         <div class="about__text">
-          <p class="eyebrow reveal">A brief background</p>
-          <h2 class="reveal">What is <br />DORO&nbsp;16?</h2>
-          <p class="lead reveal">A multifunctional 117-year-old house, blending curated events with a thoughtful selection of local design and artistry.</p>
-          <p class="reveal">Behind a quiet façade on one of Bucharest's most storied boulevards, the house opens into six rooms of patina, candlelight and conversation — a living salon where dinners, performances and gatherings find their stage.</p>
-          <a href="#offer" class="link-arrow reveal">See what happens here <span>→</span></a>
+          <p class="eyebrow reveal" data-i18n="about.eyebrow">A brief background</p>
+          <h2 class="reveal" data-i18n="about.h2">What is <br />DORO&nbsp;16?</h2>
+          <p class="lead reveal" data-i18n="about.lead">A multifunctional 117-year-old house, blending curated events with a thoughtful selection of local design and artistry.</p>
+          <p class="reveal" data-i18n="about.body">Behind a quiet façade on one of Bucharest's most storied boulevards, the house opens into six rooms of patina, candlelight and conversation — a living salon where dinners, performances and gatherings find their stage.</p>
+          <a href="#offer" class="link-arrow reveal"><span data-i18n="about.link">See what happens here</span> <span>→</span></a>
         </div>
       </div>
     </section>
@@ -91,23 +97,23 @@
     <!-- ============ "AT DORO" SIGNATURE ============ -->
     <section class="section atdoro" id="atdoro" aria-labelledby="atdoroTitle">
       <div class="atdoro__inner">
-        <p class="eyebrow reveal">From a quiet dinner to a full production</p>
+        <p class="eyebrow reveal" data-i18n="atdoro.eyebrow">From a quiet dinner to a full production</p>
         <div class="atdoro__row reveal">
           <div class="reel" id="reel" role="img" aria-label="Dinners, parties, live acts, workshops, launches, brunches, celebrations and activations — at Doro">
             <div class="reel__drum" id="reelDrum" aria-hidden="true">
-              <span class="reel__word">dinners</span>
-              <span class="reel__word">parties</span>
-              <span class="reel__word">live acts</span>
-              <span class="reel__word">workshops</span>
-              <span class="reel__word">launches</span>
-              <span class="reel__word">brunches</span>
-              <span class="reel__word">celebrations</span>
-              <span class="reel__word">activations</span>
+              <span class="reel__word" data-i18n="reel.dinners">dinners</span>
+              <span class="reel__word" data-i18n="reel.parties">parties</span>
+              <span class="reel__word" data-i18n="reel.live">live acts</span>
+              <span class="reel__word" data-i18n="reel.workshops">workshops</span>
+              <span class="reel__word" data-i18n="reel.launches">launches</span>
+              <span class="reel__word" data-i18n="reel.brunches">brunches</span>
+              <span class="reel__word" data-i18n="reel.celebrations">celebrations</span>
+              <span class="reel__word" data-i18n="reel.activations">activations</span>
             </div>
           </div>
           <h2 class="atdoro__words" id="atdoroTitle"><span>at</span> doro</h2>
         </div>
-        <p class="atdoro__sub reveal">Whatever the occasion — it finds its room, and its mood, <em>at doro.</em></p>
+        <p class="atdoro__sub reveal" data-i18n="atdoro.sub">Whatever the occasion — it finds its room, and its mood, <em>at doro.</em></p>
       </div>
     </section>
 
@@ -116,15 +122,15 @@
       <div class="stats__grid">
         <div class="stat reveal">
           <span class="stat__num" data-count="2022" data-plain="true">2022</span>
-          <span class="stat__label">Established</span>
+          <span class="stat__label" data-i18n="stats.established">Established</span>
         </div>
         <div class="stat reveal">
           <span class="stat__num" data-prefix="&gt;" data-count="200">0</span>
-          <span class="stat__label">Events hosted</span>
+          <span class="stat__label" data-i18n="stats.events">Events hosted</span>
         </div>
         <div class="stat reveal">
           <span class="stat__num" data-prefix="&gt;" data-count="12000">0</span>
-          <span class="stat__label">Guests welcomed</span>
+          <span class="stat__label" data-i18n="stats.guests">Guests welcomed</span>
         </div>
       </div>
     </section>
@@ -135,8 +141,8 @@
         <img src="assets/img/house-drawing.png" alt="" />
       </div>
       <blockquote class="reveal">
-        <p>“Because a house finds its soul<br /> in the people who fill&nbsp;it.”</p>
-        <cite>— and there is nothing that wins us over more than good stories well&nbsp;told.</cite>
+        <p data-i18n="quote.p">“Because a house finds its soul<br /> in the people who fill&nbsp;it.”</p>
+        <cite data-i18n="quote.cite">— and there is nothing that wins us over more than good stories well&nbsp;told.</cite>
       </blockquote>
     </section>
 
@@ -144,9 +150,9 @@
     <section class="section dream" id="why">
       <div class="dream__grid">
         <div class="dream__text">
-          <p class="eyebrow reveal">Why we do it</p>
-          <h2 class="reveal">A daily drive<br />to bring people together</h2>
-          <p class="lead reveal">Bringing the most inspiring people together to create a better future for each — and creating meaningful connections along the way.</p>
+          <p class="eyebrow reveal" data-i18n="dream.eyebrow">Why we do it</p>
+          <h2 class="reveal" data-i18n="dream.h2">A daily drive<br />to bring people together</h2>
+          <p class="lead reveal" data-i18n="dream.lead">Bringing the most inspiring people together to create a better future for each — and creating meaningful connections along the way.</p>
         </div>
         <figure class="dream__media reveal">
           <img src="assets/img/dinner-room.jpg" alt="A long candlelit dinner filling a high-ceilinged room at DORO 16." loading="lazy" />
@@ -157,9 +163,9 @@
     <!-- ============ OFFER / THREE HOUSES ============ -->
     <section class="section offer" id="offer">
       <div class="section__head">
-        <p class="eyebrow reveal">How we do it</p>
-        <h2 class="reveal">Just come and… experience.</h2>
-        <p class="section__intro reveal">Brunch, dinners, parties, live acts — three ways to spend an evening at&nbsp;doro.</p>
+        <p class="eyebrow reveal" data-i18n="offer.eyebrow">How we do it</p>
+        <h2 class="reveal" data-i18n="offer.h2">Just come and… experience.</h2>
+        <p class="section__intro reveal" data-i18n="offer.intro">Brunch, dinners, parties, live acts — three ways to spend an evening at&nbsp;doro.</p>
       </div>
 
       <div class="offer__grid">
@@ -169,9 +175,9 @@
           </div>
           <div class="offer-card__body">
             <span class="offer-card__index">01</span>
-            <h3>Our House</h3>
-            <p class="offer-card__kicker">Private gatherings</p>
-            <p>Brunches, dinners, parties and live acts curated by us — the house at its most intimate, open to those who love a good evening.</p>
+            <h3 data-i18n="offer.c1.title">Our House</h3>
+            <p class="offer-card__kicker" data-i18n="offer.c1.kicker">Private gatherings</p>
+            <p data-i18n="offer.c1.body">Brunches, dinners, parties and live acts curated by us — the house at its most intimate, open to those who love a good evening.</p>
           </div>
         </article>
 
@@ -181,9 +187,9 @@
           </div>
           <div class="offer-card__body">
             <span class="offer-card__index">02</span>
-            <h3>Our Homes</h3>
-            <p class="offer-card__kicker">Concept store &amp; design</p>
-            <p>A promoting platform and concept store for the local designers and makers we admire — artistry woven through every room.</p>
+            <h3 data-i18n="offer.c2.title">Our Homes</h3>
+            <p class="offer-card__kicker" data-i18n="offer.c2.kicker">Concept store &amp; design</p>
+            <p data-i18n="offer.c2.body">A promoting platform and concept store for the local designers and makers we admire — artistry woven through every room.</p>
           </div>
         </article>
 
@@ -193,9 +199,9 @@
           </div>
           <div class="offer-card__body">
             <span class="offer-card__index">03</span>
-            <h3>Your House</h3>
-            <p class="offer-card__kicker">Your events</p>
-            <p>Corporate dinners, workshops, parties and product launches. Yes — we can do it for you, too. The house becomes yours for the night.</p>
+            <h3 data-i18n="offer.c3.title">Your House</h3>
+            <p class="offer-card__kicker" data-i18n="offer.c3.kicker">Your events</p>
+            <p data-i18n="offer.c3.body">Corporate dinners, workshops, parties and product launches. Yes — we can do it for you, too. The house becomes yours for the night.</p>
           </div>
         </article>
       </div>
@@ -204,29 +210,29 @@
     <!-- ============ PRIVATE GATHERINGS ============ -->
     <section class="section gatherings">
       <div class="section__head">
-        <p class="eyebrow reveal">Private gatherings</p>
-        <h2 class="reveal">Three kinds of evening</h2>
+        <p class="eyebrow reveal" data-i18n="gath.eyebrow">Private gatherings</p>
+        <h2 class="reveal" data-i18n="gath.h2">Three kinds of evening</h2>
       </div>
       <div class="gatherings__grid">
         <figure class="feature reveal">
           <div class="feature__media"><img src="assets/img/dinner-table.jpg" alt="A beautifully set dinner table glowing with candles." loading="lazy" /></div>
           <figcaption>
-            <h3>Dinners</h3>
-            <p>Immersive, multisensory experiences crafted by our handpicked selection of expert chefs.</p>
+            <h3 data-i18n="gath.dinners.t">Dinners</h3>
+            <p data-i18n="gath.dinners.b">Immersive, multisensory experiences crafted by our handpicked selection of expert chefs.</p>
           </figcaption>
         </figure>
         <figure class="feature reveal">
           <div class="feature__media"><img src="assets/img/lounge-people.jpg" alt="Guests mingling and dancing in the lounge." loading="lazy" /></div>
           <figcaption>
-            <h3>Parties</h3>
-            <p>Mingling &amp; dance — because we all need it. The salon turns warm, loud and alive.</p>
+            <h3 data-i18n="gath.parties.t">Parties</h3>
+            <p data-i18n="gath.parties.b">Mingling &amp; dance — because we all need it. The salon turns warm, loud and alive.</p>
           </figcaption>
         </figure>
         <figure class="feature reveal">
           <div class="feature__media"><img src="assets/img/live-trumpet.jpg" alt="A musician performing a live act in the house." loading="lazy" /></div>
           <figcaption>
-            <h3>Live Acts</h3>
-            <p>From symphonic evenings to theatre and dance performances — we fold art into our everyday cravings.</p>
+            <h3 data-i18n="gath.live.t">Live Acts</h3>
+            <p data-i18n="gath.live.b">From symphonic evenings to theatre and dance performances — we fold art into our everyday cravings.</p>
           </figcaption>
         </figure>
       </div>
@@ -235,19 +241,19 @@
     <!-- ============ EVENTS SHOWCASE ============ -->
     <section class="section events" id="events">
       <div class="section__head">
-        <p class="eyebrow reveal">A few of the things that have happened here</p>
-        <h2 class="reveal">Curated, every&nbsp;time</h2>
+        <p class="eyebrow reveal" data-i18n="events.eyebrow">A few of the things that have happened here</p>
+        <h2 class="reveal" data-i18n="events.h2">Curated, every&nbsp;time</h2>
       </div>
       <ul class="events__list">
-        <li class="reveal"><button class="events__btn" type="button" data-event="0"><span>“House Lancôme” activation</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="1"><span>“House Disney” activation</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="2"><span>New Collection Launch</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="3"><span>Strategy Board Meeting</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="4"><span>Creative Team Workshop</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="5"><span>Monthly Community Meetings</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="6"><span>5-Year Anniversary Party</span></button></li>
-        <li class="reveal"><button class="events__btn" type="button" data-event="7"><span>Sponsors' Dinner</span></button></li>
-        <li class="reveal events__more"><span>…and many more</span></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="0"><span data-i18n="ev.0.title">“House Lancôme” activation</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="1"><span data-i18n="ev.1.title">“House Disney” activation</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="2"><span data-i18n="ev.2.title">New Collection Launch</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="3"><span data-i18n="ev.3.title">Strategy Board Meeting</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="4"><span data-i18n="ev.4.title">Creative Team Workshop</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="5"><span data-i18n="ev.5.title">Monthly Community Meetings</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="6"><span data-i18n="ev.6.title">5-Year Anniversary Party</span></button></li>
+        <li class="reveal"><button class="events__btn" type="button" data-event="7"><span data-i18n="ev.7.title">Sponsors' Dinner</span></button></li>
+        <li class="reveal events__more"><span data-i18n="events.more">…and many more</span></li>
       </ul>
     </section>
 
@@ -268,8 +274,8 @@
     <!-- ============ GALLERY / THE MOOD ============ -->
     <section class="section gallery" id="gallery">
       <div class="section__head">
-        <p class="eyebrow reveal">The mood</p>
-        <h2 class="reveal">A house after dark</h2>
+        <p class="eyebrow reveal" data-i18n="gallery.eyebrow">The mood</p>
+        <h2 class="reveal" data-i18n="gallery.h2">A house after dark</h2>
       </div>
       <div class="gallery__grid">
         <figure class="g-item g-tall reveal"><img src="assets/img/dinner-chandelier.jpg" alt="Dinner beneath a glowing chandelier and overhanging branches." loading="lazy" /></figure>
@@ -285,26 +291,36 @@
       </div>
     </section>
 
+    <!-- ============ JOURNAL / BLOG ============ -->
+    <section class="section journal" id="journal" hidden>
+      <div class="section__head">
+        <p class="eyebrow reveal" data-i18n="journal.eyebrow">From the house</p>
+        <h2 class="reveal" data-i18n="journal.h2">The Journal</h2>
+        <p class="section__intro reveal" data-i18n="journal.intro">Stories from the events that have filled these rooms.</p>
+      </div>
+      <div class="journal__grid" id="journalGrid" data-max="3"></div>
+    </section>
+
     <!-- ============ GUESTS ============ -->
     <section class="section guests">
       <div class="guests__inner">
         <div class="guests__head">
-          <p class="eyebrow reveal">Our ideal guests</p>
-          <h2 class="reveal">Creators, visionaries &amp; the curious</h2>
-          <p class="lead reveal">A house finds its soul in the people who fill it — so we love the presence of:</p>
+          <p class="eyebrow reveal" data-i18n="guests.eyebrow">Our ideal guests</p>
+          <h2 class="reveal" data-i18n="guests.h2">Creators, visionaries &amp; the curious</h2>
+          <p class="lead reveal" data-i18n="guests.lead">A house finds its soul in the people who fill it — so we love the presence of:</p>
         </div>
         <div class="guests__grid">
           <div class="guest reveal">
-            <h3>Entrepreneurs</h3>
-            <p>Our beloved hustlers.</p>
+            <h3 data-i18n="guests.g1.t">Entrepreneurs</h3>
+            <p data-i18n="guests.g1.b">Our beloved hustlers.</p>
           </div>
           <div class="guest reveal">
-            <h3>Creatives</h3>
-            <p>Our most creative dreamers.</p>
+            <h3 data-i18n="guests.g2.t">Creatives</h3>
+            <p data-i18n="guests.g2.b">Our most creative dreamers.</p>
           </div>
           <div class="guest reveal">
-            <h3>The Young Generation</h3>
-            <p>Because we love to nurture potential.</p>
+            <h3 data-i18n="guests.g3.t">The Young Generation</h3>
+            <p data-i18n="guests.g3.b">Because we love to nurture potential.</p>
           </div>
         </div>
       </div>
@@ -314,23 +330,23 @@
     <section class="section specs" id="specs">
       <div class="specs__grid">
         <div class="specs__intro">
-          <p class="eyebrow reveal">The space, in numbers</p>
-          <h2 class="reveal">Technicalities</h2>
-          <p class="reveal">Six rooms of restored interior, a bar, a working kitchen and a terrace — equipped for everything from a board dinner to a product launch.</p>
+          <p class="eyebrow reveal" data-i18n="specs.eyebrow">The space, in numbers</p>
+          <h2 class="reveal" data-i18n="specs.h2">Technicalities</h2>
+          <p class="reveal" data-i18n="specs.body">Six rooms of restored interior, a bar, a working kitchen and a terrace — equipped for everything from a board dinner to a product launch.</p>
           <figure class="specs__media reveal">
             <img src="assets/img/chef.jpg" alt="A chef at work in the DORO 16 kitchen." loading="lazy" />
           </figure>
         </div>
         <ul class="specs__list">
-          <li class="reveal"><span class="specs__val">270</span><span class="specs__unit">sqm</span></li>
-          <li class="reveal"><span class="specs__val">6</span><span class="specs__unit">rooms</span></li>
-          <li class="reveal"><span class="specs__val">2</span><span class="specs__unit">bathrooms</span></li>
-          <li class="reveal"><span class="specs__val">1</span><span class="specs__unit">terrace</span></li>
-          <li class="reveal"><span class="specs__val">Bar</span><span class="specs__unit">+ full F&amp;B</span></li>
-          <li class="reveal"><span class="specs__val">Kitchen</span><span class="specs__unit">on site</span></li>
-          <li class="reveal"><span class="specs__val">85"</span><span class="specs__unit">TV screen</span></li>
-          <li class="reveal"><span class="specs__val">Projector</span><span class="specs__unit">+ sound system</span></li>
-          <li class="reveal"><span class="specs__val">Parking</span><span class="specs__unit">available</span></li>
+          <li class="reveal"><span class="specs__val">270</span><span class="specs__unit" data-i18n="specs.sqm">sqm</span></li>
+          <li class="reveal"><span class="specs__val">6</span><span class="specs__unit" data-i18n="specs.rooms">rooms</span></li>
+          <li class="reveal"><span class="specs__val">2</span><span class="specs__unit" data-i18n="specs.baths">bathrooms</span></li>
+          <li class="reveal"><span class="specs__val">1</span><span class="specs__unit" data-i18n="specs.terrace">terrace</span></li>
+          <li class="reveal"><span class="specs__val" data-i18n="specs.bar.v">Bar</span><span class="specs__unit" data-i18n="specs.bar.u">+ full F&amp;B</span></li>
+          <li class="reveal"><span class="specs__val" data-i18n="specs.kitchen.v">Kitchen</span><span class="specs__unit" data-i18n="specs.kitchen.u">on site</span></li>
+          <li class="reveal"><span class="specs__val">85"</span><span class="specs__unit" data-i18n="specs.tv">TV screen</span></li>
+          <li class="reveal"><span class="specs__val" data-i18n="specs.proj.v">Projector</span><span class="specs__unit" data-i18n="specs.proj.u">+ sound system</span></li>
+          <li class="reveal"><span class="specs__val" data-i18n="specs.parking.v">Parking</span><span class="specs__unit" data-i18n="specs.parking.u">available</span></li>
         </ul>
       </div>
     </section>
@@ -338,17 +354,17 @@
     <!-- ============ TEAM ============ -->
     <section class="section team" id="team">
       <div class="section__head">
-        <p class="eyebrow reveal">The people behind the house</p>
-        <h2 class="reveal">OK, but who?</h2>
-        <p class="section__intro reveal">A house is only as warm as its hosts.</p>
+        <p class="eyebrow reveal" data-i18n="team.eyebrow">The people behind the house</p>
+        <h2 class="reveal" data-i18n="team.h2">OK, but who?</h2>
+        <p class="section__intro reveal" data-i18n="team.intro">A house is only as warm as its hosts.</p>
       </div>
       <div class="team__grid">
         <figure class="member reveal">
           <div class="member__photo"><img src="assets/img/team-dora.jpg" alt="Portrait of Dora Surugiu-Kocsolade." loading="lazy" /></div>
           <figcaption>
             <h3>Dora Surugiu-Kocsolade</h3>
-            <p class="member__role">Owner &amp; Co-founder</p>
-            <p class="member__bio">New Projects Architect, high on dreams and out-of-the-box-ideas driven entrepreneur. Bold visionary and keen on disruptive beginnings. Restless.</p>
+            <p class="member__role" data-i18n="team.dora.role">Owner &amp; Co-founder</p>
+            <p class="member__bio" data-i18n="team.dora.bio">New Projects Architect, high on dreams and out-of-the-box-ideas driven entrepreneur. Bold visionary and keen on disruptive beginnings. Restless.</p>
             <a class="member__link" href="https://www.linkedin.com/in/dora-surugiu-kocsolade-337a695/" target="_blank" rel="noopener" aria-label="Dora Surugiu-Kocsolade on LinkedIn">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.38c0-1.28-.02-2.93-1.78-2.93-1.79 0-2.06 1.4-2.06 2.84V21H9z"/></svg>
             </a>
@@ -358,8 +374,8 @@
           <div class="member__photo"><img src="assets/img/team-sergio.jpg" alt="Portrait of Sergio Zabila." loading="lazy" /></div>
           <figcaption>
             <h3>Sergio Zabila</h3>
-            <p class="member__role">Co-founder · Kitchen specialist</p>
-            <p class="member__bio">Soft soul with a hard shell, a storyteller with a multicultural heritage, a very strong professional passionate about kitchenware and with the sharpest eye for details. Complex.</p>
+            <p class="member__role" data-i18n="team.sergio.role">Co-founder · Kitchen specialist</p>
+            <p class="member__bio" data-i18n="team.sergio.bio">Soft soul with a hard shell, a storyteller with a multicultural heritage, a very strong professional passionate about kitchenware and with the sharpest eye for details. Complex.</p>
             <a class="member__link" href="https://www.linkedin.com/in/sergio-zabila-b7ba9045/" target="_blank" rel="noopener" aria-label="Sergio Zabila on LinkedIn">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.38c0-1.28-.02-2.93-1.78-2.93-1.79 0-2.06 1.4-2.06 2.84V21H9z"/></svg>
             </a>
@@ -369,8 +385,8 @@
           <div class="member__photo"><img src="assets/img/team-camelia.jpg" alt="Portrait of Camelia Simiz." loading="lazy" /></div>
           <figcaption>
             <h3>Camelia Simiz</h3>
-            <p class="member__role">Co-founder</p>
-            <p class="member__bio">The big heart who sees and celebrates beauty all around, finds the pattern in big environments and within big teams and keeps patience in crisis, especially in the presence of good company. Unifier.</p>
+            <p class="member__role" data-i18n="team.camelia.role">Co-founder</p>
+            <p class="member__bio" data-i18n="team.camelia.bio">The big heart who sees and celebrates beauty all around, finds the pattern in big environments and within big teams and keeps patience in crisis, especially in the presence of good company. Unifier.</p>
             <a class="member__link" href="https://www.linkedin.com/in/camelia-simiz-8b0409145/" target="_blank" rel="noopener" aria-label="Camelia Simiz on LinkedIn">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.38c0-1.28-.02-2.93-1.78-2.93-1.79 0-2.06 1.4-2.06 2.84V21H9z"/></svg>
             </a>
@@ -382,30 +398,30 @@
     <!-- ============ PARTNERS ============ -->
     <section class="section partners">
       <div class="section__head">
-        <p class="eyebrow reveal">Friends &amp; partners</p>
-        <h2 class="reveal">In good company</h2>
+        <p class="eyebrow reveal" data-i18n="partners.eyebrow">Friends &amp; partners</p>
+        <h2 class="reveal" data-i18n="partners.h2">In good company</h2>
       </div>
       <div class="partners__grid">
         <div class="partner-col reveal">
-          <h3>Design</h3>
+          <h3 data-i18n="partners.design">Design</h3>
           <ul>
             <li>Theta</li><li>Nordarin</li><li>Dia Buga</li><li>Raluca Buzura</li><li>NEFF</li>
           </ul>
-          <span class="partner-col__etc">&amp; more</span>
+          <span class="partner-col__etc" data-i18n="partners.more">&amp; more</span>
         </div>
         <div class="partner-col reveal">
-          <h3>Food &amp; Beverage</h3>
+          <h3 data-i18n="partners.fb">Food &amp; Beverage</h3>
           <ul>
             <li>Chef Sorin Stoica</li><li>Flavours</li><li>Maidan</li><li>Rasova Winery</li><li>FineStore</li><li>Brewzeus</li>
           </ul>
-          <span class="partner-col__etc">&amp; more</span>
+          <span class="partner-col__etc" data-i18n="partners.more">&amp; more</span>
         </div>
         <div class="partner-col reveal">
-          <h3>Production</h3>
+          <h3 data-i18n="partners.prod">Production</h3>
           <ul>
             <li>Atelier Interesart</li><li>:arrogant films</li><li>JamSession Agency</li><li>Upgrade Events</li>
           </ul>
-          <span class="partner-col__etc">&amp; more</span>
+          <span class="partner-col__etc" data-i18n="partners.more">&amp; more</span>
         </div>
       </div>
     </section>
@@ -417,21 +433,21 @@
       </div>
       <div class="contact__inner">
         <div class="contact__lead">
-          <p class="eyebrow reveal">Want to find out more?</p>
-          <h2 class="reveal">Let's host something<br />extraordinary.</h2>
-          <p class="lead reveal">Tell us what you're dreaming up — a dinner, a launch, a party, a performance — and we'll shape the house around it.</p>
+          <p class="eyebrow reveal" data-i18n="contact.eyebrow">Want to find out more?</p>
+          <h2 class="reveal" data-i18n="contact.h2">Let's host something<br />extraordinary.</h2>
+          <p class="lead reveal" data-i18n="contact.lead">Tell us what you're dreaming up — a dinner, a launch, a party, a performance — and we'll shape the house around it.</p>
 
           <ul class="contact__details reveal">
             <li>
-              <span class="contact__k">Address</span>
-              <a href="https://maps.google.com/?q=Calea+Dorobanti+16+Bucharest" target="_blank" rel="noopener">Calea Dorobanți nr. 16, Bucharest</a>
+              <span class="contact__k" data-i18n="contact.k.address">Address</span>
+              <a href="https://maps.google.com/?q=Calea+Dorobanti+16+Bucharest" target="_blank" rel="noopener" data-i18n="contact.address">Calea Dorobanți nr. 16, Bucharest</a>
             </li>
             <li>
-              <span class="contact__k">Phone</span>
+              <span class="contact__k" data-i18n="contact.k.phone">Phone</span>
               <a href="tel:+40745354430">+40 745 354 430</a>
             </li>
             <li>
-              <span class="contact__k">Email</span>
+              <span class="contact__k" data-i18n="contact.k.email">Email</span>
               <a href="mailto:camelia@doro-16.com">camelia@doro-16.com</a>
             </li>
           </ul>
@@ -439,30 +455,30 @@
 
         <form class="contact__form reveal" id="contactForm" novalidate>
           <div class="field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            <label for="cf-name" data-i18n="form.name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name.ph" placeholder="Your name" />
           </div>
           <div class="field">
-            <label for="cf-email">Email</label>
+            <label for="cf-email" data-i18n="form.email">Email</label>
             <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
           </div>
           <div class="field">
-            <label for="cf-type">Type of event</label>
+            <label for="cf-type" data-i18n="form.type">Type of event</label>
             <select id="cf-type" name="type">
-              <option>Private dinner</option>
-              <option>Party / celebration</option>
-              <option>Corporate dinner</option>
-              <option>Workshop</option>
-              <option>Product launch</option>
-              <option>Live act / performance</option>
-              <option>Something else</option>
+              <option data-i18n="form.opt.dinner">Private dinner</option>
+              <option data-i18n="form.opt.party">Party / celebration</option>
+              <option data-i18n="form.opt.corporate">Corporate dinner</option>
+              <option data-i18n="form.opt.workshop">Workshop</option>
+              <option data-i18n="form.opt.launch">Product launch</option>
+              <option data-i18n="form.opt.live">Live act / performance</option>
+              <option data-i18n="form.opt.other">Something else</option>
             </select>
           </div>
           <div class="field">
-            <label for="cf-msg">Tell us about it</label>
-            <textarea id="cf-msg" name="message" rows="4" placeholder="Date, number of guests, the mood you're after…"></textarea>
+            <label for="cf-msg" data-i18n="form.msg">Tell us about it</label>
+            <textarea id="cf-msg" name="message" rows="4" data-i18n-ph="form.msg.ph" placeholder="Date, number of guests, the mood you're after…"></textarea>
           </div>
-          <button type="submit" class="btn btn--solid btn--full">Send enquiry</button>
+          <button type="submit" class="btn btn--solid btn--full" data-i18n="form.submit">Send enquiry</button>
           <p class="contact__note" id="formNote" hidden></p>
         </form>
       </div>
@@ -474,7 +490,7 @@
     <div class="footer__inner">
       <div class="footer__brand">
         <img src="assets/img/logo.png" alt="DORO 16" class="footer__mark" />
-        <p>The space for extraordinary events.</p>
+        <p data-i18n="footer.tagline">The space for extraordinary events.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/dorobanti16events/" target="_blank" rel="noopener" aria-label="DORO 16 on Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z"/></svg>
@@ -488,20 +504,20 @@
         </div>
       </div>
       <nav class="footer__nav" aria-label="Footer">
-        <a href="#about">The House</a>
-        <a href="#offer">What We Do</a>
-        <a href="#events">Events</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.house">The House</a>
+        <a href="#offer" data-i18n="nav.offer">What We Do</a>
+        <a href="#events" data-i18n="nav.events">Events</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
       </nav>
       <div class="footer__meta">
-        <p>Calea Dorobanți 16, Bucharest</p>
+        <p data-i18n="contact.address">Calea Dorobanți 16, Bucharest</p>
         <p><a href="mailto:camelia@doro-16.com">camelia@doro-16.com</a> · <a href="tel:+40745354430">+40 745 354 430</a></p>
       </div>
     </div>
     <div class="footer__base">
       <span>© <span id="year">2025</span> DORO 16 · Dorobanți 16 Events</span>
-      <span>Bucharest, Romania</span>
+      <span data-i18n="footer.city">Bucharest, Romania</span>
     </div>
   </footer>
 
@@ -529,6 +545,8 @@
   <div class="cursor__ring" id="cursorRing" aria-hidden="true"></div>
   <div class="cursor__dot" id="cursorDot" aria-hidden="true"></div>
 
-  <script src="script.js?v=6"></script>
+  <script src="i18n.js?v=2"></script>
+  <script src="script.js?v=7"></script>
+  <script src="blog.js?v=1"></script>
 </body>
 </html>

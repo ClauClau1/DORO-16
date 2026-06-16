@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "doro-5-years",
+      "slug": "five-years-one-house",
+      "date": "2026-05-20",
+      "status": "published",
+      "cover": "assets/img/mood-1.jpg",
+      "title": {
+        "en": "Five years, one house",
+        "ro": "Cinci ani, o casă"
+      },
+      "excerpt": {
+        "en": "We turned the lights low, filled every room, and celebrated five years of DORO 16 with the people who gave the house its soul.",
+        "ro": "Am scăzut luminile, am umplut fiecare cameră și am sărbătorit cinci ani de DORO 16 alături de oamenii care au dat suflet casei."
+      },
+      "body": {
+        "en": "Five years ago, a quiet façade on Calea Dorobanți opened into something we could only half-imagine: a living house where dinners, launches and late-night conversations would find their stage.\n\nTo mark the anniversary, we did what we know best — bespoke lighting, live music, long tables dressed with flowers, and a room full of the founders, makers and friends who have filled these rooms over the years.\n\nThank you for five extraordinary years. Here's to what the house becomes next.",
+        "ro": "Acum cinci ani, o fațadă discretă de pe Calea Dorobanți s-a deschis spre ceva ce abia puteam să ne imaginăm: o casă vie, în care cinele, lansările și conversațiile de noapte își găsesc scena.\n\nPentru a marca aniversarea, am făcut ceea ce știm noi mai bine — lumini personalizate, muzică live, mese lungi împodobite cu flori și o cameră plină de fondatorii, creatorii și prietenii care au umplut aceste camere de-a lungul anilor.\n\nMulțumim pentru cinci ani extraordinari. Să vedem ce devine casa mai departe."
+      },
+      "gallery": [
+        "assets/img/lounge-floral.jpg",
+        "assets/img/live-gathering.jpg",
+        "assets/img/dinner-chandelier.jpg"
+      ]
+    }
+  ]
+}

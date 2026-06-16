@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal · DORO 16</title>
+  <meta name="description" content="Stories from DORO 16 — a 117-year-old event house on Calea Dorobanți, Bucharest." />
+  <meta name="theme-color" content="#0c0c0d" />
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=13" />
+</head>
+<body>
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand" aria-label="DORO 16 — home">
+        <img src="assets/img/logo.png" alt="" class="brand__mark" />
+        <span class="brand__word">DORO&nbsp;16</span>
+      </a>
+      <div class="post__topnav">
+        <a href="index.html#journal" class="post__toplink" data-i18n="post.back">Back to the Journal</a>
+        <div class="lang-toggle" role="group" aria-label="Language / Limba">
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+          <span class="lang-toggle__sep">/</span>
+          <button class="lang-btn" type="button" data-lang="ro">RO</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="post" id="postArticle"></article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__base" style="border-top:none;">
+      <span>© <span id="year">2025</span> DORO 16 · Dorobanți 16 Events</span>
+      <span data-i18n="footer.city">Bucharest, Romania</span>
+    </div>
+  </footer>
+
+  <script src="i18n.js?v=2"></script>
+  <script src="blog.js?v=1"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

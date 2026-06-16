@@ -102,82 +102,54 @@
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
 
   /* ---------- Event detail modal ---------- */
-  const EVENTS = [
-    {
-      cat: "Brand activation",
-      title: "“House Lancôme” activation",
-      text: "A maison-style takeover where the house became Lancôme's world for a night — interactive installations and a multisensory beauty journey, with each of the rooms styled as another chapter of the story.",
-      photos: ["lounge-floral.jpg", "mood-1.jpg", "salon-bw.jpg"],
-    },
-    {
-      cat: "Brand activation",
-      title: "“House Disney” activation",
-      text: "An immersive brand world that reimagined the salon as a piece of the Disney universe — themed set design, experiential moments and a sense of wonder threaded through all six rooms.",
-      photos: ["hero-interior.jpg", "lounge-people.jpg", "dining-room-day.jpg"],
-    },
-    {
-      cat: "Product launch",
-      title: "New Collection Launch",
-      text: "The unveiling of a new line in a setting built to make it shine — bespoke lighting, considered staging and an atmosphere that lets the collection take centre stage.",
-      photos: ["mood-kitchen.jpg", "salon-bw.jpg", "lounge-people.jpg"],
-    },
-    {
-      cat: "Corporate gathering",
-      title: "Strategy Board Meeting",
-      text: "A focused working session far from the boardroom cliché — daylight, calm and quiet luxury across the house's restored rooms, the kind of setting that keeps great minds sharp and at ease.",
-      photos: ["dining-room-day.jpg", "window-bw.jpg", "kitchen.jpg"],
-    },
-    {
-      cat: "Workshop",
-      title: "Creative Team Workshop",
-      text: "A hands-on creative session — part masterclass, part collaboration — where teams build, make and think together around the kitchen and the long table.",
-      photos: ["kitchen-prep.jpg", "plating.jpg", "mood-kitchen.jpg"],
-    },
-    {
-      cat: "Community",
-      title: "Monthly Community Meetings",
-      text: "Our recurring gathering of makers, founders and friends of the house — because great minds think alike, and we like to keep them under one roof as often as possible.",
-      photos: ["lounge-people.jpg", "mood-1.jpg", "salon-bw.jpg"],
-    },
-    {
-      cat: "Anniversary",
-      title: "5-Year Anniversary Party",
-      text: "Five years of the house, celebrated the way we know best — bespoke lighting, live music and a room full of the people who gave the place its soul.",
-      photos: ["mood-1.jpg", "lounge-floral.jpg", "live-gathering.jpg"],
-    },
-    {
-      cat: "Private dinner",
-      title: "Sponsors' Dinner",
-      text: "An intimate, multisensory dinner crafted by our handpicked chefs — candlelight, long tables dressed with flowers, and conversation that runs late into the night.",
-      photos: ["dinner-guests.jpg", "dinner-table.jpg", "long-table.jpg", "dinner-chandelier.jpg"],
-    },
+  // Photos per event; all copy (cat/title/text) is bilingual via i18n keys ev.N.*
+  const EVENT_PHOTOS = [
+    ["lounge-floral.jpg", "mood-1.jpg", "salon-bw.jpg"],
+    ["hero-interior.jpg", "lounge-people.jpg", "dining-room-day.jpg"],
+    ["mood-kitchen.jpg", "salon-bw.jpg", "lounge-people.jpg"],
+    ["dining-room-day.jpg", "window-bw.jpg", "kitchen.jpg"],
+    ["kitchen-prep.jpg", "plating.jpg", "mood-kitchen.jpg"],
+    ["lounge-people.jpg", "mood-1.jpg", "salon-bw.jpg"],
+    ["mood-1.jpg", "lounge-floral.jpg", "live-gathering.jpg"],
+    ["dinner-guests.jpg", "dinner-table.jpg", "long-table.jpg", "dinner-chandelier.jpg"],
   ];
+  const tr = (k) => (window.t ? window.t(k) : k);
 
   const modal = $("#eventModal");
   const emCat = $("#emCat"), emTitle = $("#emTitle"), emText = $("#emText"), emGallery = $("#emGallery");
   let lastFocus = null;
+  let currentEvent = null;
 
-  const openEvent = (i) => {
-    const ev = EVENTS[i];
-    if (!ev) return;
-    lastFocus = document.activeElement;
-    emCat.textContent = ev.cat;
-    emTitle.innerHTML = ev.title;
-    emText.textContent = ev.text;
+  const renderEvent = (i) => {
+    emCat.innerHTML = tr(`ev.${i}.cat`);
+    emTitle.innerHTML = tr(`ev.${i}.title`);
+    emText.innerHTML = tr(`ev.${i}.text`);
     emGallery.innerHTML = "";
-    ev.photos.forEach((p) => {
+    const alt = tr(`ev.${i}.title`).replace(/[“”„]/g, "") + " — DORO 16";
+    (EVENT_PHOTOS[i] || []).forEach((p) => {
       const img = document.createElement("img");
       img.src = "assets/img/" + p;
-      img.alt = ev.title.replace(/[“”]/g, "") + " at DORO 16";
+      img.alt = alt;
       img.loading = "lazy";
       img.addEventListener("click", () => openLightbox(img.src, img.alt));
       emGallery.appendChild(img);
     });
+  };
+
+  const openEvent = (i) => {
+    if (!EVENT_PHOTOS[i]) return;
+    currentEvent = i;
+    lastFocus = document.activeElement;
+    renderEvent(i);
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
     modal.querySelector(".emodal__close").focus();
   };
+  // re-render the open modal when the language changes
+  window.addEventListener("languagechanged", () => {
+    if (currentEvent !== null && modal.classList.contains("is-open")) renderEvent(currentEvent);
+  });
   const closeEvent = () => {
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
@@ -201,19 +173,19 @@
     const email = $("#cf-email");
     if (!name.value.trim() || !email.value.trim() || !email.checkValidity()) {
       note.hidden = false;
-      note.textContent = "Please add your name and a valid email so we can reply.";
+      note.textContent = tr("form.err");
       note.style.color = "var(--cream-dim)";
       (!name.value.trim() ? name : email).focus();
       return;
     }
     // Compose a mailto so the enquiry reaches the house even without a backend.
-    const subject = encodeURIComponent(`Event enquiry — ${$("#cf-type").value}`);
+    const subject = encodeURIComponent(tr("form.subject") + $("#cf-type").value);
     const body = encodeURIComponent(
-      `Name: ${name.value}\nEmail: ${email.value}\nEvent type: ${$("#cf-type").value}\n\n${$("#cf-msg").value}`
+      `${tr("form.name")}: ${name.value}\n${tr("form.email")}: ${email.value}\n${tr("form.type")}: ${$("#cf-type").value}\n\n${$("#cf-msg").value}`
     );
     window.location.href = `mailto:camelia@doro-16.com?subject=${subject}&body=${body}`;
     note.hidden = false;
-    note.textContent = "Thank you — opening your email to send. We'll be in touch shortly.";
+    note.textContent = tr("form.ok");
     note.style.color = "var(--gold-soft)";
     form.reset();
   });
@@ -363,6 +335,8 @@
     const ready = document.fonts ? document.fonts.ready : Promise.resolve();
     ready.then(() => { build(); setTarget(); current = target; render(current); });
     window.addEventListener("resize", () => { build(); render(current); }, { passive: true });
+    // Romanian words have different widths — rebuild the cylinder on language change
+    window.addEventListener("languagechanged", () => { build(); render(current); });
 
     if (reduced) { ready.then(() => render(0)); return; }   // static: shows the front word
 
