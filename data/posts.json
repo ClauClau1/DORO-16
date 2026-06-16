@@ -23,6 +23,26 @@
         "assets/img/live-gathering.jpg",
         "assets/img/dinner-chandelier.jpg"
       ]
+    },
+    {
+      "id": "ffhh",
+      "slug": "ffhh",
+      "date": "2026-06-16",
+      "status": "published",
+      "cover": "assets/blog/ffhh-cover-1781639541192.jpeg",
+      "title": {
+        "en": "ffhh",
+        "ro": "hhh"
+      },
+      "excerpt": {
+        "en": "hfkasfhasjkfhksahfakhvajksfhqisifh",
+        "ro": "jhfkjshfhafoifhiofhakfsj"
+      },
+      "body": {
+        "en": "kshfaofihkjsahifuwiuhfakjhlk",
+        "ro": "jkfhasfihiuhkjvhdfiuehiul"
+      },
+      "gallery": []
     }
   ]
 }
